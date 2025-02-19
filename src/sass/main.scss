@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #111;
+    color: #eee;
+    font-size: 1.6rem;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+
+    @media (max-width: 640px) {
+        font-size: 1.4rem;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.list {
+    &__item {
+    }
+
+    &__separator {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #aaa;
+    }
+}
+
+.separator {
+    width: 100%;
+    margin: 1rem 2rem;
+}
+
+.main {
+    display: flex;
+    gap: 3rem;
+    margin: 3rem;
+
+    &__small {
+        display: none;
+    }
+
+    @media (max-width: 840px) {
+        display: none;
+
+        &__small {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.group.primary {
+    width: 40%;
+}
+
+.group.secondary {
+    width: 60%;
+}
+
+.section {
+    background-color: rgba(#444, 0.75);
+    transition: all 0.2s ease-in-out;
+
+    padding: 2rem;
+
+    &:hover {
+        background-color: rgba(#555, 0.85);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.heading {
+    font-weight: 400;
+    font-size: 2.2rem;
+
+    @media (max-width: 640px) {
+        font-size: 1.8rem;
+    }
+}
+
+.header {
+    margin: 3rem;
+
+    display: flex;
+    gap: 5rem;
+
+    &__photo {
+        height: 15rem;
+        width: 15rem;
+
+        &__image {
+            width: 15rem;
+            height: 15rem;
+            background-color: #444;
+            border: 0.1rem solid;
+            border-radius: 50%;
+        }
+    }
+
+    &__details {
+        &__name {
+            font-size: calc(1rem + 5vw);
+            margin-bottom: 0.4rem;
+            font-weight: 300;
+        }
+
+        &__title {
+            font-size: 2.3rem;
+            margin-bottom: 1.6rem;
+            font-weight: 400;
+        }
+
+        @media (max-width: 412px) {
+            &__name {
+                font-size: calc(1rem + 3vw);
+            }
+
+            &__title {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (min-width: 412px) and (max-width: 640px) {
+            &__name {
+                font-size: calc(1rem + 3.8vw);
+            }
+
+            &__title {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.resume,
+.job,
+.education {
+    margin: 1rem 2rem;
+    line-height: 1.5;
+    word-spacing: 0.2rem;
+}
+
+.contact {
+    margin: 1rem 2rem;
+
+    & * {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    } 
+
+    &__email {
+        margin-bottom: 0.4rem;
+    }
+
+    &__cel {
+        margin-bottom: 0.4rem;
+    }
+
+    &__homepage {
+        margin-bottom: 0.4rem;
+    }
+
+    //&__address {}
+}
+
+.job {
+    &__position {
+        font-size: 1.6rem;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+    }
+
+    &__company {
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+    }
+
+    &__location {
+        font-size: 1.3rem;
+        margin-bottom: 0.4remrem;
+    }
+
+    &__dates {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    &__start,
+    &__finish {
+        &__month {
+            margin-right: 0.4rem;
+        }
+    }
+
+    &__start {
+        &__year::after {
+            content: " - ";
+        }
+    }
+
+    &__activities {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+    }
+}
+
+.education {
+    &__course {
+        font-size: 1.6rem;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+    }
+
+    &__institution {
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+    }
+
+    &__location {
+        font-size: 1.3rem;
+    }
+
+    &__dates {
+        font-size: 1.3rem;
+    }
+}
+
+.skills-list {
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            flex-grow: 1;
+        }
+    }
+}
+
+.skill {
+    margin: 0.6rem 1rem;
+    padding: 1rem;
+    border: 0.1rem solid;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    //width: fit-content;
+}
+
+
+.footer {
+    width: 100%;
+    margin: 5rem 0 0;
+    padding: 3rem 0 2rem;
+
+    background-color: #222;
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    &__copy {
+        font-size: 1.4rem;
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__link-list {
+        margin: 1rem;
+        display: flex;
+        gap: 3rem;
+
+        &__item {
+            display: flex;
+            gap: .4rem;
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            a {
+                color: #aaa;
+                font-size: 1.4rem;
+
+                &:hover {
+                    color: #eee;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        &__content {
+            gap: 2rem;
+        }
+        
+        &__copy {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+}
