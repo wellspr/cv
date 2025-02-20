@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sass": "sass ./src/sass/main.scss ./src/styles/index.css --watch"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.30.0",
