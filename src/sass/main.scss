@@ -12,8 +12,6 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: #111;
-    color: #eee;
     font-size: 1.6rem;
     min-height: 100vh;
     width: 100vw;
@@ -38,7 +36,6 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #aaa;
     }
 }
 
@@ -81,13 +78,11 @@ ul {
 }
 
 .section {
-    background-color: rgba(#444, 0.75);
     transition: all 0.2s ease-in-out;
 
     padding: 2rem;
 
     &:hover {
-        background-color: rgba(#555, 0.85);
         transition: all 0.2s ease-in-out;
     }
 }
@@ -152,6 +147,12 @@ ul {
                 font-size: 1.6rem;
             }
         }
+    }
+
+    &__theme-switcher {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 }
 
@@ -286,8 +287,6 @@ ul {
     margin: 5rem 0 0;
     padding: 3rem 0 2rem;
 
-    background-color: #222;
-
     &__content {
         width: 100%;
         display: flex;
@@ -318,12 +317,7 @@ ul {
             }
 
             a {
-                color: #aaa;
                 font-size: 1.4rem;
-
-                &:hover {
-                    color: #eee;
-                }
             }
         }
     }

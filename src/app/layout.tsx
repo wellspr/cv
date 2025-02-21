@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
 import "@/sass/main.scss";
+import "@/app/themes/sass/themes.scss";
+import type { Metadata } from "next";
+import { ThemeContext } from "./themes/context/ThemeContext";
 
 export const metadata: Metadata = {
 	title: "Paulo Wells' CV",
@@ -13,9 +15,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>
+			<ThemeContext> {/* The body tag moved into ThemeContext */}
 				{children}
-			</body>
+			</ThemeContext>
 		</html>
 	);
 }

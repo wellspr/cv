@@ -1,4 +1,5 @@
 import { personal } from "@/data";
+import { SwitchThemeButton } from "../themes/components/SwitchThemeButton";
 //import Image from "next/image";
 
 export const Header = ({
@@ -18,6 +19,9 @@ export const Header = ({
             <div className="header__details">
                 <h2 className="header__details__name">{personal.name.first} {personal.name.last}</h2>
                 <h3 className="header__details__title">{personal.title}</h3>
+            </div>
+            <div className="header__theme-switcher">
+                <SwitchThemeButton />
             </div>
         </header>
     );

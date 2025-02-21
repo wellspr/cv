@@ -1,0 +1,58 @@
+body.light {
+    background-color: #eee;
+}
+
+body.dark {
+    background-color: #111;
+    color: #eee;
+}
+
+.light {
+    .section {
+        background-color: #ddd;
+
+        &:hover {
+            background-color: rgba(#ccc, 0.85);
+        }
+    }
+
+    .footer {
+        background-color: #bbb;
+
+        a {
+            color: #222;
+
+            &:hover {
+                color: #555;
+            }
+        }
+    }
+}
+
+.dark {
+    .section {
+        background-color: rgba(#444, 0.75);
+
+        &:hover {
+            background-color: rgba(#555, 0.85);
+        }
+    }
+
+    .footer {
+        background-color: #222;
+
+        a {
+            color: #aaa;
+        
+            &:hover {
+                color: #eee;
+            }
+        }
+    }
+}
+
+.list {
+    &__separator {
+        color: #aaa;
+    }
+}

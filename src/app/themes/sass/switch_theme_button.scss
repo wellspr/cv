@@ -1,0 +1,27 @@
+.switch-theme-button {
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    cursor: pointer;
+}
+
+.light {
+
+    .switch-theme-button {
+        background-color: transparent;
+        color: #111;
+    }
+}
+
+.dark {
+
+    .switch-theme-button {
+        background-color: transparent;
+        color: #eee;
+    }
+}
