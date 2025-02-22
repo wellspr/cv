@@ -98,7 +98,7 @@ export default function Home() {
 						</li>
 						<li className="footer__link-list__item">
 							<IconWorld />
-							<Link href="https://wwww.paulowells.com">paulowells.com</Link>
+							<Link href="https://paulowells.com">paulowells.com</Link>
 						</li>
 					</ul>
 				</div>
